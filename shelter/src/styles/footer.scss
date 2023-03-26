@@ -1,0 +1,87 @@
+.footer {
+  background: url("../../assets/images/facture.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 281px 305px 300px;
+    gap: 158px;
+    padding-top: 40px;
+
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 281px 305px;
+      justify-content: center;
+      row-gap: 66px;
+      padding-top: 30px;
+      column-gap: 57px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: 300px;
+      row-gap: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 234px;
+    padding: 16px 0 60px;
+
+    @media screen and (max-width: $tablet) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+      align-items: center;
+      gap: 39px;
+      min-height: 208px;
+    }
+  }
+
+  &__title {
+    color: $light-color-xl;
+
+    @media screen and (max-width: $mobile) {
+      max-width: 278px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+
+    @media screen and (max-width: $tablet) {
+      grid-column: 1/-1;
+      justify-self: center;
+    }
+
+    @media screen and (max-width: $mobile) {
+      max-width: 260px;
+    }
+  }
+}
+
+.link {
+  &__text {
+    color: $primary-color;
+    transition: 0.2s;
+  }
+
+  &__text:hover {
+    color: $primary-color-light;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .map-link {
+    align-self: flex-start;
+  }
+}

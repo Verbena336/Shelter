@@ -1,0 +1,121 @@
+/* stylelint-disable alpha-value-notation */
+.friends {
+  background-color: $light-color-l;
+
+  &__wrapper {
+    padding: 80px 0 100px;
+
+    @media screen and (max-width: $mobile) {
+      padding: 42px 0;
+    }
+  }
+
+  &__title {
+    // max-width: 400px;
+    // margin: 0 auto;
+    margin-bottom: 59px;
+    color: $dark-color-l;
+    text-align: center;
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 42px;
+    }
+  }
+}
+
+// .slider {
+//   // position: relative;
+//   // margin-bottom: 60px;
+
+//   // @media screen and (max-width: $mobile) {
+//   //   margin-bottom: 42px;
+//   // }
+
+//   &__list {
+//     display: flex;
+//     justify-content: center;
+//     gap: 90px;
+
+//     @media screen and (max-width: $tablet) {
+//       gap: 40px;
+
+//       // margin-bottom: 20px;
+//     }
+
+//     @media screen and (max-width: $mobile) {
+//       margin-bottom: 20px;
+//     }
+//   }
+
+//   &__item {
+//     z-index: 1;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 30px;
+//     width: 270px;
+//     height: 435px;
+//     overflow: hidden;
+//     background-color: $light-color-s;
+//     border-radius: 9px;
+//     transition: 0.2s;
+//   }
+
+//   &__item:nth-child(n + 3) {
+//     @media screen and (max-width: $tablet) {
+//       display: none;
+//     }
+//   }
+
+//   &__item:nth-child(n + 2) {
+//     @media screen and (max-width: $mobile) {
+//       display: none;
+//     }
+//   }
+
+//   &__item:hover,
+//   &__item:focus-within {
+//     background-color: $light-color-xl;
+//     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+//     cursor: pointer;
+
+//     .button {
+//       background-color: $primary-color-light;
+//       border-color: $primary-color-light;
+//     }
+//   }
+
+//   &__img {
+//     flex-shrink: 0;
+//   }
+
+//   &__name {
+//     color: $dark-color-l;
+//   }
+
+//   &__learn-button {
+//     width: 187px;
+//     margin-bottom: 30px;
+//     background-color: $light-color-s;
+//   }
+
+//   &__rest-button {
+//     display: block;
+//     align-items: center;
+//     width: 261px;
+//     margin: 0 auto;
+//     background-color: $primary-color;
+//   }
+// }

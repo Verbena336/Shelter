@@ -1,0 +1,94 @@
+.help {
+  background-color: $light-color-xl;
+
+  &__wrapper {
+    padding: 80px 0 100px;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    @media screen and (max-width: $mobile) {
+      padding: 42px 5px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 58px;
+    color: $dark-color-l;
+    text-align: center;
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 55px;
+    padding: 0 85px;
+    column-gap: 120px;
+
+    @media screen and (max-width: $tablet) {
+      row-gap: 55px;
+      padding: 0;
+      column-gap: 60px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      justify-content: unset;
+      gap: 30px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    // padding: 0 85px;
+    // Второй вариант, все статичное
+    // display: flex;
+    // flex-wrap: wrap;
+    // grid-gap: 3.4375rem 7.5rem;
+    // justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    // padding-top: 90px;
+    text-align: center;
+
+    @media screen and (max-width: $tablet) {
+      width: 170px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      gap: 20px;
+      width: 130px;
+    }
+
+    // width: 170px;
+    // background-repeat: no-repeat;
+    // background-position: top center;
+  }
+
+  &__img {
+    flex-shrink: 0;
+
+    @media screen and (max-width: $mobile) {
+      max-width: 50px;
+    }
+  }
+
+  &__name {
+    color: $dark-color-l;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 15px;
+      line-height: 16.5px;
+      letter-spacing: 0.06em;
+    }
+  }
+}

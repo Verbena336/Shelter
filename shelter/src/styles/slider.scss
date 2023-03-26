@@ -1,0 +1,85 @@
+.slider,
+.slider__box {
+  display: flex;
+}
+
+.slider {
+  width: 990px;
+  overflow: hidden;
+
+  @media screen and (max-width: $tablet) {
+    width: 580px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 270px;
+  }
+}
+
+.slider__box {
+  position: relative;
+  left: -1080px;
+  gap: 90px;
+
+  @media screen and (max-width: $tablet) {
+    left: -620px;
+    gap: 40px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    left: -290px;
+    gap: 20px;
+  }
+}
+
+@keyframes move-right {
+  from { left: -1080px; }
+  to { left: -2160px; }
+}
+
+@media screen and (max-width: $tablet) {
+  @keyframes move-right {
+    from { left: -620px; }
+    to { left: -1240px; }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  @keyframes move-right {
+    from { left: -290px; }
+    to { left: -580px; }
+  }
+}
+
+.animation__right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-left {
+  from { left: -1080px; }
+  to { left: 0; }
+}
+
+@media screen and (max-width: $tablet) {
+  @keyframes move-left {
+    from { left: -620px; }
+    to { left: 0; }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  @keyframes move-left {
+    from { left: -290px; }
+    to { left: 0; }
+  }
+}
+
+.animation__left {
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+
+.hidden {
+  display: none;
+}

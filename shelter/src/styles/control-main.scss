@@ -1,0 +1,40 @@
+.control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+
+  @media screen and (max-width: $mobile) {
+    position: unset;
+    width: 184px;
+    transform: unset;
+  }
+
+  &__buttons {
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    border: $primary-color 2px solid;
+    border-radius: 100%;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $primary-color-light;
+      border-color: $primary-color-light;
+    }
+  }
+
+  &__back {
+    background-image: url("../../assets/icons/Prev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__next {
+    background-image: url("../../assets/icons/Next.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

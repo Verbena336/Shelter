@@ -1,0 +1,205 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-hex-case */
+/* stylelint-disable scss/percent-placeholder-pattern */
+$primary-color: #f1cdb3;
+$primary-color-light: #fddcc4;
+$light-color-s: #fafafa;
+$light-color-xl: #fff;
+$dark-color-s: #cdcdcd;
+$dark-color-3xl: #292929;
+$dark-color-l: #545454;
+$dark-color-xl: #4c4c4c;
+$light-color-l: #f6f6f6;
+$dark-color-m: #b2b2b2;
+$tablet: 1279px;
+$mobile: 767px;
+
+@font-face {
+  font-weight: normal;
+  font-family: Arial;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../../assets/fonts/ArialMT.woff2"),
+    url("../../assets/fonts/ArialMT.woff"),
+    url("../../assets/fonts/ArialMT.ttf");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: Georgia;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../../assets/fonts/Georgia.woff2"),
+    url("../../assets/fonts/Georgia.woff"),
+    url("../../assets/fonts/georgia.ttf");
+}
+
+@mixin section-title-mobile {
+  font-size: 25px;
+  line-height: 32.5px;
+  letter-spacing: 0.06em;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // background-color: $dark-color-3xl;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &--overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  // width: 100vw;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $tablet) {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    // max-width: 320px;
+    padding: 0 10px;
+  }
+}
+
+.button {
+  padding: 13px 0;
+  color: $dark-color-3xl;
+  font-size: 17px;
+  font-family: Georgia, serif;
+  line-height: 22.1px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  border: $primary-color 2px solid;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $primary-color-light;
+    border-color: $primary-color-light;
+  }
+}
+
+.section {
+  &__title {
+    font-size: 35px;
+    font-family: Georgia, serif;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+
+    @media screen and (max-width: $mobile) {
+      @include section-title-mobile;
+
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 24px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &--hover {
+    .modal__close-button {
+      background-color: $primary-color;
+    }
+  }
+
+  &.overlay--open {
+    background-color: rgba(41, 41, 41, 0.6);
+    visibility: visible;
+    transition: 0.3s;
+
+    &:hover {
+      .modal__close-button {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

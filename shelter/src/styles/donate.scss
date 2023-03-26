@@ -1,0 +1,100 @@
+.donate {
+  background-color: $light-color-l;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 0 100px;
+
+    @media screen and (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: 60px;
+      padding-top: 81px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      // flex-wrap: wrap-reverse;
+      flex-direction: column-reverse;
+      gap: 42px;
+      padding: 42px 0;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: $mobile) {
+      max-width: 260px;
+    }
+  }
+
+  &__subtitle {
+    color: $dark-color-l;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    line-height: 16.5px;
+    letter-spacing: 0.06em;
+
+    @media screen and (max-width: $mobile) {
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 380px;
+
+    @media screen and (max-width: $mobile) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    max-width: 300px;
+    color: $dark-color-l;
+
+    @media screen and (max-width: $mobile) {
+      max-width: 229px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    gap: 15px;
+    width: 350px;
+    padding: 10px 15px;
+    color: $dark-color-l;
+    text-align: center;
+    background-color: $primary-color;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    @media screen and (max-width: $mobile) {
+      align-items: center;
+      max-width: 282px;
+      font-size: 15px;
+      line-height: 16.5px;
+    }
+  }
+
+  &__link:hover {
+    background-color: $primary-color-light;
+  }
+
+  &__text {
+    color: $dark-color-m;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    line-height: 18px;
+
+    @media screen and (max-width: $mobile) {
+      padding: 0 10px;
+      text-align: justify;
+    }
+  }
+}
